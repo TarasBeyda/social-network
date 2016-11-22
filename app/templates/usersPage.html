@@ -1,0 +1,137 @@
+<div class="login__entry__menu page__top" ng-controller="usersPageCTRL as page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="src/img/logo.png" alt="logo" id="logo__page">
+            </div>
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-4">
+                <div class="search__settings">
+                    <input type="text" placeholder="Search..." id="search__block" ng-click="page.clickSearchVisible()" ng-model="modal__search__friends">
+                    <button type="submit" class="btn btn-link fa__search" ng-click="page.searchVisible()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button type="submit" class="btn btn-link fa__cog"><i class="fa fa-cog" aria-hidden="true"></i></button>
+                    <div class="logout">
+                        <a href="#/" register-click-cancel-click-logout id="logout"><button type="submit" class="btn btn-link" ng-click="users.clickBtnLogout()"><i class="fa fa-sign-out"><span class="marginI">Logout</span></i></button></a>
+                    </div>
+                </div>
+                <div id="modal__add__friend">
+                    <ul>
+                        <li ng-repeat="key in page.usersObjs | filter: modal__search__friends" class="add">
+                            <img src="{{users.usersObjs[users.idUsers].avatars}}" alt="">
+                            {{key.name}} {{key.sname}}
+                            <button type="submit" class="btn btn-xs btn-primary btn__plus__add" ng-click="page.addFriends(key)"><i class="fa fa-plus"><span class="marginI">Add</span></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" ng-controller="usersPageCTRL as page">
+    <div class="row on__avatars__bg">
+        <div class="col-md-3">
+            <i class="fa fa-camera fa__camera" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-5">
+            <div class="ava">
+                <!--<img src="{{users.usersObjs[users.idUsers].avatars}}" id="avatars" alt="avatars" ng-mouseover="page.avatarsMMouseOver()">-->
+                <div id="avatars" style="background-size: cover; background-position: center center"></div>
+                <input type="file" class="btn btn-block btn-primary change__avatars" ng-click="page.avatarsChange($event)" ng-mouseover="page.avatarsMMouseOver()">
+                <button type="button" class="btn btn-block btn-primary change__avatars__zindex_2" ng-mouseover="page.avatarsMMouseOver()"><i class="fa fa-camera" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="col md-4">
+
+        </div>
+    </div>
+</div>
+<div class="container" ng-controller="usersPageCTRL as page">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="col-md-3 main__left">
+                <p class="userNameSname">{{users.usersObjs[users.idUsers].name}} {{users.usersObjs[users.idUsers].sname}}</p>
+                <div class="user__inf">
+                    <p class="inf">Information</p>
+                    <p ng-if="page.user__phone">Phone: {{users.usersObjs[users.idUsers].phone}}</p>
+                    <p ng-if="page.user__country">Country: {{users.usersObjs[users.idUsers].country}}</p>
+                    <p ng-if="page.user__city">City: {{users.usersObjs[users.idUsers].city}}</p>
+                    <p ng-if="page.user__skype">Skype: {{users.usersObjs[users.idUsers].skype}}</p>
+                    <p ng-if="page.user__GitHub">GitHub: {{users.usersObjs[users.idUsers].github}}</p>
+                    <p ng-if="page.user__disc">Description: {{users.usersObjs[users.idUsers].description}}</p>
+                </div>
+                <button type="button" class="btn btn-primary pull-right add__inf" data-toggle="modal" data-target="#modal__add__inf">Add information</button>
+                <div class="modal fade" id="modal__add__inf" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add information</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="user__phone">Phone number</label>
+                                    <input type="text" placeholder="Enter phone" class="form-control" id="user__phone" ng-model="page.user__phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user__country">Country</label>
+                                    <input type="text" placeholder="Enter country" class="form-control" id="user__country" ng-model="page.user__country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user__city">City</label>
+                                    <input type="text" placeholder="Enter city" class="form-control" id="user__city" ng-model="page.user__city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user__skype">Skype</label>
+                                    <input type="text" placeholder="Enter skype" class="form-control" id="user__skype" ng-model="page.user__skype">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user__GitHub">GitHub</label>
+                                    <input type="text" placeholder="Enter GitHub" class="form-control" id="user__GitHub" ng-model="page.user__GitHub">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user__disc">Description</label>
+                                    <textarea type="text" placeholder="Enter GitHub" class="form-control" id="user__disc" ng-model="page.user__disc"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="page.clickSaveInf()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 main__center" ng-mouseover="page.avatarsReturnMouseOver()">
+                <div class="form-group">
+                    <input type="text" class="form-control post__input" placeholder="Theme" ng-model="page.post__input">
+                    <textarea cols="30" rows="2" class="form-control post__tarea" placeholder="Message" ng-model="page.postTarea"></textarea>
+                    <button type="submit" class="btn btn-success" ng-click="page.postNews()"><span class="postNewsBtn">Post</span></button>
+                </div>
+                <div class="posts">
+                    <div ng-repeat="key in page.usersObjs[page.idUsers].posts" class="postUsers">
+                        <img src="{{users.usersObjs[users.idUsers].avatars}}" alt="">
+                        <p class="writer">{{users.usersObjs[users.idUsers].name}} {{users.usersObjs[users.idUsers].sname}}</p>
+                        <p class="date">{{key.date}}</p>
+                        <div class="postUsersTitle">
+                            <p class="theme">{{key.data2}}</p>
+                            <p class="message">{{key.data}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 main__right" ng-controller="usersPageCTRL as page">
+                <div class="friends__box">
+                    <p class="friends">Friends</p>
+                    <div class="my__friends">
+                        <div class="div__friend" ng-repeat="key in page.usersObjs[users.idUsers].friends">
+                            <img src="{{key.avatars}}" alt="friend__avatars">
+                            <p href="#">{{key.name}}</p>
+                            <p><button type="button" class="btn btn-xs btn-danger" ng-click="page.removeFriends(key)">Delete</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

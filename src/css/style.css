@@ -1,0 +1,353 @@
+.btn:focus, .btn:active:focus, .btn.active:focus{
+    outline:none;
+    box-shadow:none;
+}
+
+body {
+    background: #F0EFEF;
+}
+
+/*Logo sign in*/
+#logo {
+    width: 163px;
+    height: 39px;
+    margin: 16px 0;
+}
+.logoLogos {
+    margin: 120px 0 0 0;
+}
+.logoLogos img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logoLogos p {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+/* Top menu*/
+.login__entry__menu {
+    background: #4F6A82;
+}
+.login__entry__menu h1 {
+    padding: 15px 0 6px 0;
+    margin-top: 0;
+    color: #F0EFEF;
+}
+.logout {
+    float: right;
+    margin-left: 5px;
+}
+.logout span {
+    font-size: 20px;
+    color: #333;
+}
+.logout i {
+    font-size: 20px;
+}
+#logo__page {
+    height: 40px;
+    margin: 3px 0;
+}
+.fa-sign-out {
+    color: #333;
+}
+.search__settings .fa__cog {
+    border-right: 2px solid #333;
+    padding-right: 15px;
+}
+.search__settings {
+    margin: 5px 0;
+    float: right;
+}
+.search__settings i {
+    font-size: 20px;
+    color: #333;
+}
+.fa__search {
+    position: relative;
+    z-index: 4;
+}
+.search__settings input[type="text"] {
+    border-radius: 15px;
+    padding: 0 50px 0 20px;
+}
+#search__block {
+    height: 27px;
+    /* width: 202px; */
+    width: 0;
+    opacity: 0;
+    /* display: none; */
+    padding: 0 50px 0 20px;
+    position: absolute;
+    /* top: 9px; */
+    top: -20px;
+    right: 173px;
+    color: #78828c;
+    border: 2px solid #DDD;
+    border-radius: 15px;
+    z-index: 3;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+}
+.login__main:after, .register__main:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.login__main, .register__main {
+    margin: 130px auto;
+}
+.register__main {
+    width: 457px;
+    margin: 50px auto;
+}
+.h1__login {
+    margin-top: 25px;
+}
+.errorEntr {
+    color: red;
+}
+.form__group__relativ {
+    position: relative;
+}
+.form__group__relativ img {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* avatars bg*/
+.on__avatars__bg {
+    background: #b2b2b2;
+    height: 250px;
+    text-align: center;
+    position: relative;
+}
+.ava {
+    width: 243px;
+    height: 233px;
+    margin: auto;
+}
+/*img[alt="avatars"] {*/
+    /*margin: 10px auto;*/
+    /*width: 243px;*/
+    /*height: 233px;*/
+    /*border-radius: 100%;*/
+    /*position: absolute;*/
+    /*top: 105px;*/
+    /*z-index: 2;*/
+/*}*/
+#avatars {
+    margin: 10px auto;
+    width: 243px;
+    height: 233px;
+    border-radius: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    top: 105px;
+    z-index: 2;
+}
+/*Icon*/
+i {
+    margin-left: -3px;
+}
+.marginI {
+    margin-left: 3px;
+}
+
+/*usersPage*/
+/*header*/
+.head:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.head {
+    /*background: #5cb85c;*/
+    font-size: 20px;
+}
+.hi__user{
+    margin: 5px 30px 0;
+}
+
+/*main__left && main__right*/
+.main__left {
+    height: 1000px;
+    /*background: green;*/
+}
+.main__right {
+    height: 1000px;
+    /*background: brown;*/
+}
+.main__left, .main__right {
+    margin-top: 15px;
+}
+.user__inf {
+    border: 3px solid #DDD;
+    min-height: 140px;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.user__inf .inf {
+    color: #333;
+    font-size: 20px;
+    margin: 10px 0;
+    border-bottom: 1px solid #DDD;
+    text-align: center;
+}
+.friends {
+    color: #333;
+    font-size: 20px;
+    margin: 10px 0;
+    border-bottom: 1px solid #DDD;
+}
+.add__inf {
+    margin-bottom: 25px;
+}
+.userNameSname {
+    color: #333;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+.postNewsBtn {
+    padding: 0 20px;
+}
+.postUsers {
+    border: 3px solid #DDD;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+.postUsersTitle {
+    /*background: gold;*/
+    min-height: 50px;
+}
+.postUsersContent {
+    background: gray;
+    height: 50px;
+}
+.post__input, .post__tarea {
+    margin: 15px 0;
+}
+.posts img {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    float: left;
+}
+.posts .date {
+    color: #939393;
+    margin: 3px 0 0;
+}
+.posts .theme {
+    margin: 6px 0 0 6px;
+    font-weight: 900;
+}
+.posts .message {
+    margin: 0 0 0 6px;
+    max-width: 426px;
+}
+.posts .writer {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+.btn__plus__add {
+    float: right;
+}
+#modal__add__friend {
+    width: 202px;
+    position: absolute;
+    z-index: 2;
+    background: white;
+    top: 36px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    left: 15px;
+    /*border: 3px solid #DDD;*/
+    border-style: solid;
+    border-color: #DDD;
+    height: 0;
+    overflow: hidden;
+}
+#modal__add__friend img {
+    height: 20px;
+    width: 20px;
+}
+#modal__add__friend li {
+    margin: 10px 5px;
+}
+.friends__box {
+    border: 3px solid #DDD;
+    border-radius: 15px;
+    min-height: 200px;
+    padding: 0 15px;
+    max-height: 417px;
+    overflow: hidden;
+}
+.friends__box p {
+    text-align: center;
+}
+.friends__box img {
+    height: 60px;
+    width: 60px;
+}
+.div__friend {
+    float: left;
+    width: 60px;
+    margin: 0 9px 0 9px;
+}
+.friends__box::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+    /* btn Change avatars */
+.change__avatars__zindex_2 {
+    position: absolute;
+    top: 306px;
+    left: 183px;
+    z-index: 2;
+    height: 36px;
+    width: 121px;
+    border-radius: 100%;
+    opacity: 0;
+}
+.change__avatars__zindex_2 i {
+    color: white;
+    font-size: 15px;
+    opacity: 1;
+    z-index: 5;
+}
+.change__avatars {
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    top: 313px;
+    left: 205px;
+    width: 97px;
+    background: none;
+    border: none;
+}
+.on__avatars__bg .fa__camera {
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    margin: 10px 0 0 0;
+    float: left;
+}
+.on__avatars__bg .fa__camera:hover {
+    border: 2px solid #DDD;
+}
+
+/*main__center*/
+
+.main__center {
+    height: 1000px;
+    margin-top: 100px;
+}

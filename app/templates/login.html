@@ -1,0 +1,41 @@
+<div class="login__entry__menu">
+    <div class="container">
+        <div class="col-lg-12 col-md-12">
+            <img src="src/img/logo.png" alt="logo" id="logo">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="logoLogos">
+                <p><img src="src/img/padlock.png" alt="padlock">Privacy for your messages</p>
+                <p><img src="src/img/mouse.png" alt="mouse">It is effortless in using</p>
+                <p><img src="src/img/resting.png" alt="resting">Text messages-relaxive way to communicate</p>
+                <p><img src="src/img/clapperboard.png" alt="clapperboard">Opportunity to entertain yourself</p>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 form__entry">
+            <form name="entry__form" novalidate>
+                <div class="login__main">
+                    <h2 class="h1__login">Sign up</h2>
+                    <div class="form-group form__group__relativ">
+                        <label for="emailEntr">E-mail:</label> <span class="errorEntr" ng-show="entry__form.emailEntr.$touched && entry__form.emailEntr.$invalid"><img
+                            src="src/img/error.png" alt="errorSign"></span>
+                        <input name="emailEntr" type="email" class="form-control" id="emailEntr" ng-model="users.emailEntr" required>
+                    </div>
+                    <div class="form-group form__group__relativ">
+                        <label for="passEntr">Password:</label> <span class="errorEntr" ng-show="entry__form.passEntr.$touched && entry__form.passEntr.$invalid"><img
+                            src="src/img/error.png" alt=""></span>
+                        <input name="passEntr" type="password" class="form-control" id="passEntr" ng-model="users.passEntr" required>
+                    </div>
+                    <div class="form-group">
+                        <a href="" users-check id="user__page"><button type="submit" class="btn btn-primary" ng-disabled="entry__form.$invalid" ng-click="users.usersCheck()"><i class="fa fa-sign-in"><span class="marginI">Entry</span></i></button></a>
+                        <a href="#/register" click-register><input type="button" class="btn btn-primary" value="Register" ng-click="users.clickBtnReg()"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

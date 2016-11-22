@@ -1,0 +1,1 @@
+angular.module('Social',['ngRoute', 'Controllers', 'factorySocial'])
